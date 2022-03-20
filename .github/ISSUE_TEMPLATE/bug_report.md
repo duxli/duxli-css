@@ -1,38 +1,54 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Help us improve!
 title: ''
 labels: bug
 assignees: ''
-
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+# Bug Report: _Short description here_
 
-**To Reproduce**
-Steps to reproduce the behavior:
+A clear and concise description of what the problem is.
+
+Examples:
+
+- _Styles are not updating when CSS variable changes._
+- _When I do X, an error is thrown saying Y_
+
+## Steps to Reproduce
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+### Expected Behavior
+
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+### Screenshots
+
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### Environment
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+- Device: [e.g. desktop, iPhone6]
+- OS: [e.g. Windows 10, iOS]
+- OS Version:
+- Browser: [e.g. stock browser, safari]
+- Browser Version: [e.g. 22]
 
-**Additional context**
+## Workaround
+
+Have you found a workaround?
+If so, please include it here. Otherwise, remove this section.
+
+## Possible Cause
+
+Have you found a possible cause?
+If so, please include it here. Otherwise, remove this section.
+Feel free to include more than one possible cause.
+
+## Additional Context
+
 Add any other context about the problem here.
