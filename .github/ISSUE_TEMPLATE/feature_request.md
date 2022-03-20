@@ -4,17 +4,29 @@ about: Suggest an idea for this project
 title: ''
 labels: enhancement
 assignees: ''
-
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+# Feature Request: _Short description here_
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+A clear and concise description of what the problem is.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+Examples:
 
-**Additional context**
+- _I'm frustrated with [...]_
+- _I'd like the ability to [...]_
+
+## Potential Solutions
+
+A clear and concise description of any solutions or features you've considered.
+
+## Proposed Solution
+
+A clear and concise description of the solution that you are proposing.
+Please include the benefits and potential drawbacks.
+
+If you are not proposing a solution,
+remove this section and add the `help wanted` label to this issue.
+
+## Additional context
+
 Add any other context or screenshots about the feature request here.
