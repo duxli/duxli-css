@@ -1,0 +1,22 @@
+@forward './animation';
+@forward './border';
+@forward './color';
+@forward './elevation';
+// @forward './root';
+@forward './typography';
+
+@use './animation' as animation;
+@use './border' as border;
+@use './color' as color;
+@use './elevation' as elevation;
+@use './typography' as typography;
+
+@mixin root {
+  :root {
+    @include animation.animation();
+    @include border.border();
+    @include color.color();
+    @include elevation.elevation();
+    @include typography.typography();
+  }
+}

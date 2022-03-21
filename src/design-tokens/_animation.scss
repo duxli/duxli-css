@@ -1,0 +1,7 @@
+@mixin transition {
+  // @todo
+}
+
+@mixin animation {
+  @include transition();
+}
