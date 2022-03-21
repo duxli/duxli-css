@@ -1,14 +1,20 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const markdownLoader = path.resolve(__dirname, 'loaders', 'marked-loader.js');
 
 const config = {
-  entry: './src/index.md',
+  entry: [
+    './src/duxli.scss',
+    // Tedious, but any markdown files need to be added here.
+    // @todo FUTURE - Automatically determine all markdown files in source.
+    './src/index.md',
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'demo.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,26 +24,19 @@ const config = {
         '</title></head><body><div id="app"></div></body></html>',
       filename: 'index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: 'duxli.css',
+    }),
   ],
   module: {
     rules: [
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          minimize: {
-            removeComments: false,
-            collapseWhitespace: false,
-          },
-        },
-      },
       {
         test: /\.md$/,
         use: markdownLoader,
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },

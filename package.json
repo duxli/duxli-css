@@ -16,15 +16,13 @@
   "devDependencies": {
     "css-loader": "^6.7.1",
     "front-matter": "^4.0.2",
-    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.21",
-    "markdown-loader": "^8.0.0",
     "marked": "^4.0.12",
+    "mini-css-extract-plugin": "^2.6.0",
     "prettier": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
-    "style-loader": "^3.3.1",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
