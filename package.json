@@ -6,15 +6,23 @@
   "scripts": {
     "build": "sass src:dist",
     "format": "prettier --write .",
+    "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "sass --watch src:dist"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "html-loader": "^3.1.0",
+    "markdown-loader": "^8.0.0",
     "prettier": "^2.6.0",
-    "sass": "^1.49.9"
-  },
-  "peerDependencies": {}
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
 }
