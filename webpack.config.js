@@ -2,10 +2,12 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const markdownLoader = path.resolve(__dirname, 'loaders', 'marked-loader.js');
+
 const config = {
-  entry: './src/duxli.scss',
+  entry: './src/index.md',
   output: {
-    path: path.resolve(__dirname, 'dist', 'demo'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   plugins: [
@@ -19,6 +21,20 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          minimize: {
+            removeComments: false,
+            collapseWhitespace: false,
+          },
+        },
+      },
+      {
+        test: /\.md$/,
+        use: markdownLoader,
+      },
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
