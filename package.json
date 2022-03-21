@@ -2,16 +2,19 @@
   "name": "@duxli/css",
   "version": "0.1.0",
   "description": "Pure CSS styling with design tokens",
-  "main": "index.js",
+  "main": "src/duxli.scss",
   "scripts": {
+    "build": "sass src:dist",
     "format": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch src:dist"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "sass": "^1.49.9"
   },
   "peerDependencies": {}
 }

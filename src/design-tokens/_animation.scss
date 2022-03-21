@@ -1,0 +1,7 @@
+@mixin transition {
+  // @todo FUTURE - Decide upon and add tokens for transition times
+}
+
+@mixin animation {
+  @include transition();
+}
