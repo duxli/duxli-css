@@ -4,11 +4,14 @@
   "description": "Pure CSS styling with design tokens",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  },
   "peerDependencies": {}
 }
