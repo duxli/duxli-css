@@ -1,19 +1,90 @@
 @mixin color-neutral {
-  --dx-color-neutral-000: 255 255 255;
-  --dx-color-neutral-050: 249 249 249;
-  --dx-color-neutral-100: 236 236 236;
-  --dx-color-neutral-200: 222 222 222;
-  --dx-color-neutral-300: 206 206 206;
-  --dx-color-neutral-400: 186 186 186;
-  --dx-color-neutral-500: 160 160 160;
-  --dx-color-neutral-600: 132 132 132;
-  --dx-color-neutral-700: 108 108 108;
-  --dx-color-neutral-800: 89 89 89;
-  --dx-color-neutral-900: 63 63 63;
-  --dx-color-neutral-950: 39 39 39;
-  --dx-color-neutral-999: 0 0 0;
+  --dx-color-neutral-contrast: #ffffff;
+
+  --dx-color-neutral-000: #ffffff;
+  --dx-color-neutral-050: #f7f7f7;
+  --dx-color-neutral-100: #ededed;
+  --dx-color-neutral-150: #dddddd;
+  --dx-color-neutral-200: #cccccc;
+  --dx-color-neutral-250: #aaaaaa;
+  --dx-color-neutral-300: #999999;
+
+  --dx-color-neutral-400: #707070;
+  --dx-color-neutral-500: #5e5e5e;
+  --dx-color-neutral-600: #4d4d4d;
+
+  --dx-color-neutral-700: #444444;
+  --dx-color-neutral-750: #3b3b3b;
+  --dx-color-neutral-800: #2f2f2f;
+  --dx-color-neutral-850: #1e1e1e;
+  --dx-color-neutral-900: #111111;
+  --dx-color-neutral-950: #080808;
+  --dx-color-neutral-999: #000000;
+}
+
+@mixin color-primary {
+  --dx-color-primary-contrast: #ffffff;
+
+  --dx-color-primary-light: #a1ad9b;
+  --dx-color-primary-main: #627658;
+  --dx-color-primary-dark: #45533e;
+
+  --dx-color-primary-100: #e0e4de;
+  --dx-color-primary-200: #c0c8bc;
+  --dx-color-primary-300: #a1ad9b;
+
+  --dx-color-primary-400: #7a8b71;
+  --dx-color-primary-500: #627658;
+  --dx-color-primary-600: #53644b;
+
+  --dx-color-primary-700: #45533e;
+  --dx-color-primary-800: #364130;
+  --dx-color-primary-900: #272f23;
+}
+
+@include color-accent {
+  --dx-color-accent-contrast: #000000;
+
+  --dx-color-accent-light: #c6eeea;
+  --dx-color-accent-main: #82dbd1;
+  --dx-color-accent-dark: #538c86;
+
+  --dx-color-accent-100: #dcf5f2;
+  --dx-color-accent-200: #c6eeea;
+  --dx-color-accent-300: #afe8e2;
+
+  --dx-color-accent-400: #99e1d9;
+  --dx-color-accent-500: #82dbd1;
+  --dx-color-accent-600: #6bb4ab;
+
+  --dx-color-accent-700: #538c86;
+  --dx-color-accent-800: #3c6560;
+  --dx-color-accent-900: #243d3b;
+}
+
+@include color-warn {
+  --dx-color-warn-contrast: #ffffff;
+
+  --dx-color-warn-light: #e69285;
+  --dx-color-warn-main: #dc6452;
+  --dx-color-warn-dark: #ab3a29;
+
+  --dx-color-warn-100: #f7dbd6;
+  --dx-color-warn-200: #efb6ad;
+  --dx-color-warn-300: #e69285;
+
+  --dx-color-warn-400: #dc6452;
+  --dx-color-warn-500: #d64933;
+  --dx-color-warn-600: #c1422e;
+
+  --dx-color-warn-700: #ab3a29;
+  --dx-color-warn-800: #963324;
+  --dx-color-warn-900: #802c1f;
 }
 
 @mixin color {
   @include color-neutral();
+  @include color-primary();
+  @include color-accent();
+  @include color-warn();
 }

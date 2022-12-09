@@ -1,0 +1,290 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+<Meta title="Theme/Color Palettes" />
+
+# Color Palettes
+
+With Duxli, colors are named by intent so it is easy to determine how they're used in the theme.
+
+Color palettes include the following shades:
+
+| Category | Named Shade | Secondary Shades          | Description                                                                               |
+| -------- | ----------- | ------------------------- | ----------------------------------------------------------------------------------------- |
+| Main     | `*-main`    | `*-400`, `*-500`, `*-600` | Main shades for the color. These must all contrast with `*-contrast`.                     |
+| Light    | `*-light`   | `*-100`, `*-200`, `*-300` | Lightest shades of the color. These should always contrast with `--dx-color-neutral-999`. |
+| Dark     | `*-dark`    | `*-700`, `*-800`, `*-900` | Darkest shades of the color. These should always contrast with `--dx-color-neutral-000`.  |
+
+Lighter colors, like yellow, will likely have lighter main shades with a dark value for `*-contrast`.
+Darker colors, like navy, will likely have darker main shades and a light `*-contrast`.
+Either option is fine, so long as all shades in the main category have sufficient contrast against the specified contrast color for the palette.
+
+This pattern limits the shades that can be used, but is predictable and simple.
+
+## Neutrals
+
+The neutral palette is used across the theme for backgrounds, text, borders, and more.
+
+Neutral colors have additional color shades in the light and dark categories.
+
+The neutral palette also includes `--dx-color-neutral-000` and `--dx-color-neutral-999`.
+These shades represent the lightest and darkest colors for the app.
+Effectively, these are black and white, but any color can be used.
+
+<ColorPalette>
+  <ColorItem
+    title="Black/White"
+    subtitle="Darkest and lightest variants of the neutral palette."
+    colors={{
+      '--dx-color-neutral-000': '#ffffff',
+      '--dx-color-neutral-999': '#000000',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    subtitle="Contrast color for all main shades."
+    colors={{
+      '--dx-color-neutral-contrast': '#ffffff',
+    }}
+  />
+
+  <ColorItem
+    title="Named Shades"
+    subtitle="These are the shades that will be used most often."
+    colors={{
+      '*-light': '#cccccc',
+      '*-main': '#5e5e5e',
+      '*-dark': '#3b3b3b',
+    }}
+  />
+  <ColorItem
+    title="Light Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-999</code>
+      </>
+    }
+    colors={{
+      '*-050': '#f7f7f7',
+      '*-100': '#ededed',
+      '*-150': '#dddddd',
+      '*-200': '#cccccc',
+      '*-250': '#aaaaaa',
+      '*-300': '#999999',
+    }}
+  />
+  <ColorItem
+    title="Main Shades"
+    subtitle={
+      <>
+        These should all contrast with <code>--dx-color-neutral-contrast</code>.
+      </>
+    }
+    colors={{
+      '*-400': '#707070',
+      '*-500': '#5e5e5e',
+      '*-600': '#4d4d4d',
+    }}
+  />
+  <ColorItem
+    title="Dark Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-000</code>
+      </>
+    }
+    colors={{
+      '*-700': '#444444',
+      '*-750': '#3b3b3b',
+      '*-800': '#2f2f2f',
+      '*-850': '#1e1e1e',
+      '*-900': '#111111',
+      '*-950': '#080808',
+    }}
+  />
+</ColorPalette>
+
+## Primary
+
+The primary palette is used across the theme for primary action buttons, links, inputs, and more.
+
+<ColorPalette>
+  <ColorItem
+    title="Contrast"
+    subtitle="Contrast color for all shades."
+    colors={{
+      '--dx-color-primary-contrast': '#ffffff',
+    }}
+  />
+  <ColorItem
+    title="Named Shades"
+    subtitle="These are the shades that will be used most often."
+    colors={{
+      '*-light': '#a1ad9b',
+      '*-main': '#627658',
+      '*-dark': '#45533e',
+    }}
+  />
+  <ColorItem
+    title="Light Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-999</code>
+      </>
+    }
+    colors={{
+      '*-100': '#e0e4de',
+      '*-200': '#c0c8bc',
+      '*-300': '#a1ad9b',
+    }}
+  />
+  <ColorItem
+    title="Main Shades"
+    subtitle={
+      <>
+        These should all contrast with <code>--dx-color-primary-contrast</code>.
+      </>
+    }
+    colors={{
+      '*-400': '#7a8b71',
+      '*-500': '#627658',
+      '*-600': '#53644b',
+    }}
+  />
+  <ColorItem
+    title="Dark Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-000</code>
+      </>
+    }
+    colors={{
+      '*-700': '#45533e',
+      '*-800': '#364130',
+      '*-900': '#272f23',
+    }}
+  />
+</ColorPalette>
+
+## Accent
+
+The accent palette is used for badges, outlines, and places where we want to grab the user's attention for non-critical situations.
+
+<ColorPalette>
+  <ColorItem
+    title="Contrast"
+    subtitle="Contrast color for all shades."
+    colors={{
+      '--dx-color-accent-contrast': '#000000',
+    }}
+  />
+  <ColorItem
+    title="Named Shades"
+    subtitle="These are the shades that will be used most often."
+    colors={{
+      '*-light': '#c6eeea',
+      '*-main': '#82dbd1',
+      '*-dark': '#538c86',
+    }}
+  />
+  <ColorItem
+    title="Light Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-999</code>
+      </>
+    }
+    colors={{
+      '*-100': '#dcf5f2',
+      '*-200': '#c6eeea',
+      '*-300': '#afe8e2',
+    }}
+  />
+  <ColorItem
+    title="Main Shades"
+    subtitle={
+      <>
+        These should all contrast with <code>--dx-color-accent-contrast</code>.
+      </>
+    }
+    colors={{
+      '*-400': '#99e1d9',
+      '*-500': '#82dbd1',
+      '*-600': '#6bb4ab',
+    }}
+  />
+  <ColorItem
+    title="Dark Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-000</code>
+      </>
+    }
+    colors={{
+      '*-700': '#538c86',
+      '*-800': '#3c6560',
+      '*-900': '#243d3b',
+    }}
+  />
+</ColorPalette>
+
+## Warn
+
+The warn palette is used across the theme for things such as dangerous actions or errors.
+
+<ColorPalette>
+  <ColorItem
+    title="Contrast"
+    subtitle="Contrast color for all shades."
+    colors={{
+      '--dx-color-warn-contrast': '#ffffff',
+    }}
+  />
+  <ColorItem
+    title="Named Shades"
+    subtitle="These are the shades that will be used most often."
+    colors={{
+      '*-light': '#e69285',
+      '*-main': '#dc6452',
+      '*-dark': '#ab3a29',
+    }}
+  />
+  <ColorItem
+    title="Light Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-999</code>
+      </>
+    }
+    colors={{
+      '*-100': '#f7dbd6',
+      '*-200': '#efb6ad',
+      '*-300': '#e69285',
+    }}
+  />
+  <ColorItem
+    title="Main Shades"
+    subtitle={
+      <>
+        These should all contrast with <code>--dx-color-warn-contrast</code>.
+      </>
+    }
+    colors={{
+      '*-400': '#dc6452',
+      '*-500': '#d64933',
+      '*-600': '#c1422e',
+    }}
+  />
+  <ColorItem
+    title="Dark Shades"
+    subtitle={
+      <>
+        These should always contrast with <code>--dx-color-neutral-000</code>
+      </>
+    }
+    colors={{
+      '*-700': '#ab3a29',
+      '*-800': '#963324',
+      '*-900': '#802c1f',
+    }}
+  />
+</ColorPalette>
