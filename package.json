@@ -9,11 +9,23 @@
     "format": "prettier --write .",
     "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass --watch src:dist"
+    "watch": "sass --watch src:dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/html": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
     "css-loader": "^6.7.1",
     "front-matter": "^4.0.2",
     "html-webpack-plugin": "^5.5.0",
@@ -26,5 +38,6 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
-  }
+  },
+  "dependencies": {}
 }
