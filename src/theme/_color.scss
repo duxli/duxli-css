@@ -1,5 +1,12 @@
 @mixin color-neutral {
-  --dx-color-neutral-contrast: #ffffff;
+  --dx-color-neutral-light: #aaaaaa;
+  --dx-color-neutral-light-contrast: #000000;
+
+  --dx-color-neutral-main: #5e5e5e;
+  --dx-color-neutral-main-contrast: #ffffff;
+
+  --dx-color-neutral-dark: #2f2f2f;
+  --dx-color-neutral-dark-contrast: #ffffff;
 
   --dx-color-neutral-000: #ffffff;
   --dx-color-neutral-050: #f7f7f7;
@@ -23,11 +30,14 @@
 }
 
 @mixin color-primary {
-  --dx-color-primary-contrast: #ffffff;
-
   --dx-color-primary-light: #a1ad9b;
+  --dx-color-primary-light-contrast: #000000;
+
   --dx-color-primary-main: #627658;
+  --dx-color-primary-main-contrast: #ffffff;
+
   --dx-color-primary-dark: #45533e;
+  --dx-color-primary-dark-contrast: #ffffff;
 
   --dx-color-primary-100: #e0e4de;
   --dx-color-primary-200: #c0c8bc;
@@ -42,12 +52,15 @@
   --dx-color-primary-900: #272f23;
 }
 
-@include color-accent {
-  --dx-color-accent-contrast: #000000;
-
+@mixin color-accent {
   --dx-color-accent-light: #c6eeea;
+  --dx-color-accent-light-contrast: #000000;
+
   --dx-color-accent-main: #82dbd1;
+  --dx-color-accent-main-contrast: #000000;
+
   --dx-color-accent-dark: #538c86;
+  --dx-color-accent-dark-contrast: #ffffff;
 
   --dx-color-accent-100: #dcf5f2;
   --dx-color-accent-200: #c6eeea;
@@ -62,12 +75,15 @@
   --dx-color-accent-900: #243d3b;
 }
 
-@include color-warn {
-  --dx-color-warn-contrast: #ffffff;
-
+@mixin color-warn {
   --dx-color-warn-light: #e69285;
+  --dx-color-warn-light-contrast: #000000;
+
   --dx-color-warn-main: #dc6452;
+  --dx-color-warn-main-contrast: #ffffff;
+
   --dx-color-warn-dark: #ab3a29;
+  --dx-color-warn-dark-contrast: #ffffff;
 
   --dx-color-warn-100: #f7dbd6;
   --dx-color-warn-200: #efb6ad;

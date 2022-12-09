@@ -1,27 +1,8 @@
-@use '../config' as config;
-
-$css-var-border-radius-xs: '--#{config.$design-token-prefix-border-radius}-xs' !default;
-$css-var-border-radius-sm: '--#{config.$design-token-prefix-border-radius}-sm' !default;
-$css-var-border-radius-md: '--#{config.$design-token-prefix-border-radius}-md' !default;
-$css-var-border-radius-lg: '--#{config.$design-token-prefix-border-radius}-lg' !default;
-$css-var-border-radius-xl: '--#{config.$design-token-prefix-border-radius}-xl' !default;
-$css-var-border-radius-none: '--#{config.$design-token-prefix-border-radius}-none' !default;
-$css-var-border-radius-circle: '--#{config.$design-token-prefix-border-radius}-circle' !default;
-$css-var-border-radius-pill: '--#{config.$design-token-prefix-border-radius}-pill' !default;
-
-$border-radius-xs: 0.125rem !default;
-
 @mixin border-radius {
   // Standard Sizes
-  #{$css-var-border-radius-xs}: $border-radius-xs;
-  #{$css-var-border-radius-sm}: $border-radius-sm;
-  #{$css-var-border-radius-md}: $border-radius-md;
-  #{$css-var-border-radius-lg}: $border-radius-lg;
-  #{$css-var-border-radius-xl}: $border-radius-xl;
   --dx-border-radius-sm: 0.25rem;
   --dx-border-radius-md: 0.5rem;
   --dx-border-radius-lg: 0.75rem;
-  --dx-border-radius-xl: 1rem;
 
   // Additional sizes
   --dx-border-radius-none: 0px;
@@ -29,6 +10,15 @@ $border-radius-xs: 0.125rem !default;
   --dx-border-radius-pill: 9999px;
 }
 
+@mixin border-width {
+  --dx-border-width: 0.125rem;
+
+  --dx-border-width-sm: 0.0625rem;
+  --dx-border-width-md: 0.125rem;
+  --dx-border-width-lg: 0.25rem;
+}
+
 @mixin border {
   @include border-radius();
+  @include border-width();
 }

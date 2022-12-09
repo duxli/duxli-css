@@ -1,37 +1,65 @@
 @mixin font-family {
-  --dx-font-primary: sans-serif;
-  --dx-font-sans: sans-serif;
-  --dx-font-serif: serif;
-  --dx-font-mono: monospace;
+  --dx-font-family: sans-serif;
+
+  --dx-font-family-heading: var(--dx-font-family);
+
+  --dx-font-family-button: var(--dx-font-family);
+
+  --dx-font-family-code: monospace;
 }
 
 @mixin font-size {
-  --dx-font-size-2xs: 0.625rem;
-  --dx-font-size-xs: 0.75rem;
+  --dx-font-size: 1rem;
+
   --dx-font-size-sm: 0.875rem;
-  --dx-font-size-md: 1rem;
-  --dx-font-size-lg: 1.25rem;
-  --dx-font-size-xl: 1.5rem;
-  --dx-font-size-2xl: 2.25rem;
-  --dx-font-size-3xl: 3rem;
-  --dx-font-size-4xl: 4rem;
+  --dx-font-size-md: var(--dx-font-size);
+  --dx-font-size-lg: 1.15rem;
+
+  --dx-font-size-heading-sm: 1.5rem;
+  --dx-font-size-heading-md: 2.25rem;
+  --dx-font-size-heading-lg: 3rem;
+
+  --dx-font-size-heading: 2.25rem;
+
+  --dx-font-size-button: 0.875rem;
+
+  --dx-font-size-code: var(--dx-font-size-md);
 }
 
 @mixin font-weight {
-  --dx-font-weight-normal: 400;
-  --dx-font-weight-bold: 700;
+  --dx-font-weight: 400;
+
+  --dx-font-weight-sm: 300;
+  --dx-font-weight-md: var(--dx-font-weight);
+  --dx-font-weight-lg: 600;
+
+  --dx-font-weight-heading: var(--dx-font-weight-sm);
+  --dx-font-weight-button: var(--dx-font-weight-lg);
+  --dx-font-weight-code: var(--dx-font-weight-md);
 }
 
 @mixin letter-spacing {
-  --dx-letter-spacing-sm: -0.015em;
-  --dx-letter-spacing-md: normal;
-  --dx-letter-spacing-lg: 0.075em;
+  --dx-font-letter-spacing: normal;
+
+  --dx-font-letter-spacing-sm: -0.015em;
+  --dx-font-letter-spacing-md: var(--dx-font-letter-spacing);
+  --dx-font-letter-spacing-lg: 0.075em;
+
+  --dx-font-letter-spacing-heading: var(--dx-font-letter-spacing);
+  --dx-font-letter-spacing-button: var(--dx-font-letter-spacing);
+  --dx-font-letter-spacing-code: var(--dx-font-letter-spacing);
 }
 
 @mixin line-height {
-  --dx-line-height-sm: 1.4;
-  --dx-line-height-md: 1.8;
-  --dx-line-height-lg: 2.2;
+  --dx-font-line-height: 1.8;
+
+  --dx-font-line-height-sm: 1.4;
+  --dx-font-line-height-md: var(--dx-font-line-height);
+  --dx-font-line-height-lg: 2.2;
+
+  --dx-font-line-height-heading: var(--dx-font-line-height);
+  --dx-font-line-height-button: var(--dx-font-line-height);
+  --dx-font-line-height-code: var(--dx-font-line-height);
 }
 
 @mixin typography {
