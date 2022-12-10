@@ -1,6 +1,5 @@
 import { generateHtml, createArgTypes } from '../_storybook/util';
-import '../theme/tokens.scss';
-import './button.scss';
+import '../styles.scss';
 
 export default {
   title: 'components/Button',

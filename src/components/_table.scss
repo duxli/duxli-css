@@ -1,0 +1,22 @@
+@mixin table {
+  .dx-table,
+  table {
+    border-spacing: 0;
+    display: block;
+    overflow-x: auto;
+    text-align: left;
+    width: 100%;
+
+    @media (min-width: 40rem) {
+      display: table;
+      overflow-x: initial;
+    }
+
+    .dx-table-cell,
+    td,
+    th {
+      border-bottom: var(--dx-border-width-sm) solid var(--dx-color-divider);
+      padding: var(--dx-padding-md) var(--dx-padding-lg);
+    }
+  }
+}

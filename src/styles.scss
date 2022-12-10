@@ -1,0 +1,5 @@
+@import './theme/index';
+@import './components/index';
+
+@include components;
+@include root;

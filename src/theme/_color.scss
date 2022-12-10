@@ -98,9 +98,26 @@
   --dx-color-warn-900: #802c1f;
 }
 
+@mixin color-scheme-light {
+  --dx-color-divider: var(--dx-color-neutral-200);
+}
+
+@mixin color-scheme-dark {
+  --dx-color-divider: var(--dx-color-neutral-700);
+}
+
 @mixin color {
   @include color-neutral();
   @include color-primary();
   @include color-accent();
   @include color-warn();
+
+  @include color-scheme-light();
+
+  @media (prefers-color-scheme: light) {
+    @include color-scheme-light();
+  }
+  @media (prefers-color-scheme: dark) {
+    @include color-scheme-dark();
+  }
 }

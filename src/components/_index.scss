@@ -1,0 +1,10 @@
+@forward './button';
+@forward './table';
+
+@use './button' as button;
+@use './table' as table;
+
+@mixin components {
+  @include button.button();
+  @include table.table();
+}
