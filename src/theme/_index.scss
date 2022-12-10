@@ -2,12 +2,14 @@
 @forward './border';
 @forward './color';
 @forward './elevation';
+@forward './spacing';
 @forward './typography';
 
 @use './animation' as animation;
 @use './border' as border;
 @use './color' as color;
 @use './elevation' as elevation;
+@use './spacing' as spacing;
 @use './typography' as typography;
 
 @mixin root {
@@ -16,6 +18,7 @@
     @include border.border();
     @include color.color();
     @include elevation.elevation();
+    @include spacing.spacing();
     @include typography.typography();
   }
 }

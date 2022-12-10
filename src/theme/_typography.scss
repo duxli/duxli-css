@@ -51,14 +51,14 @@
 }
 
 @mixin line-height {
-  --dx-font-line-height: 1.8;
+  --dx-font-line-height: 1.25;
 
-  --dx-font-line-height-sm: 1.4;
+  --dx-font-line-height-sm: 1;
   --dx-font-line-height-md: var(--dx-font-line-height);
-  --dx-font-line-height-lg: 2.2;
+  --dx-font-line-height-lg: 1.75;
 
-  --dx-font-line-height-heading: var(--dx-font-line-height);
-  --dx-font-line-height-button: var(--dx-font-line-height);
+  --dx-font-line-height-heading: var(--dx-font-line-height-lg);
+  --dx-font-line-height-button: var(--dx-font-line-height-sm);
   --dx-font-line-height-code: var(--dx-font-line-height);
 }
 

@@ -1,0 +1,20 @@
+@mixin padding {
+  --dx-padding: 8px;
+
+  --dx-padding-sm: 4px;
+  --dx-padding-md: 8px;
+  --dx-padding-lg: 16px;
+}
+
+@mixin margin {
+  --dx-margin: 0.5rem;
+
+  --dx-margin-sm: 0.25rem;
+  --dx-margin-md: 0.5rem;
+  --dx-margin-lg: 1rem;
+}
+
+@mixin spacing {
+  @include padding();
+  @include margin();
+}
