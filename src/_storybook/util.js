@@ -202,8 +202,8 @@ export function createStyleArgType(props) {
 /**
  * @param {object} options
  * @param {string} options.tag
+ * @param {string} options.innerHtml
  * @param {boolean} options.skipTag
- * @param {boolean} options.skipBaseClass
  * @param {boolean} options.skipInnerHtml
  * @param {boolean} options.skipDisabled
  * @param {Record<string, StyleArgTypeOptions>} options.styleArgTypes
@@ -211,6 +211,7 @@ export function createStyleArgType(props) {
 export function createArgTypes(options) {
   const {
     tag,
+    innerHtml = 'Example',
     skipTag = false,
     skipInnerHtml = false,
     skipDisabled = false,
@@ -234,7 +235,7 @@ export function createArgTypes(options) {
   if (!skipInnerHtml) {
     argTypes.innerHtml = {
       control: { type: 'text' },
-      defaultValue: 'Example',
+      defaultValue: innerHtml,
       description: 'Content of the element',
     };
   }

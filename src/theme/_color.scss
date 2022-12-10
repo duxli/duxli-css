@@ -99,10 +99,18 @@
 }
 
 @mixin color-scheme-light {
+  --dx-color-text: var(--dx-color-neutral-900);
+  --dx-color-text-light: var(--dx-color-neutral-000);
+  --dx-color-text-dark: var(--dx-color-neutral-999);
+
   --dx-color-divider: var(--dx-color-neutral-200);
 }
 
 @mixin color-scheme-dark {
+  --dx-color-text: var(--dx-color-neutral-000);
+  --dx-color-text-light: var(--dx-color-neutral-000);
+  --dx-color-text-dark: var(--dx-color-neutral-999);
+
   --dx-color-divider: var(--dx-color-neutral-700);
 }
 

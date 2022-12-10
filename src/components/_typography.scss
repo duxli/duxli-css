@@ -1,0 +1,58 @@
+@mixin typography {
+  body {
+    font-family: var(--dx-font-family);
+    font-size: var(--dx-font-size);
+    font-weight: var(--dx-font-weight);
+    color: var(--dx-color-text);
+  }
+
+  b,
+  strong {
+    font-weight: var(--dx-font-weight-lg);
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--dx-color-accent-dark);
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: var(--dx-color-accent-main);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: var(--dx-font-weight-heading);
+    font-family: var(--dx-font-family-heading);
+    letter-spacing: var(--dx-font-letter-spacing-heading);
+    margin-bottom: var(--dx-margin-lg);
+    margin-top: 0;
+  }
+  h1 {
+    font-size: var(--dx-font-size-heading-lg);
+  }
+  h2 {
+    font-size: var(--dx-font-size-heading-md);
+  }
+  h3 {
+    font-size: var(--dx-font-size-heading-sm);
+  }
+  h4 {
+    font-size: var(--dx-font-size-lg);
+  }
+  h5 {
+    font-size: var(--dx-font-size-md);
+  }
+  h6 {
+    font-size: var(--dx-font-size-sm);
+  }
+}

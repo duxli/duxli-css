@@ -1,5 +1,5 @@
 @mixin font-family {
-  --dx-font-family: sans-serif;
+  --dx-font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
   --dx-font-family-heading: var(--dx-font-family);
 
