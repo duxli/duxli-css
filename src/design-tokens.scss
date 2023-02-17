@@ -1,0 +1,102 @@
+@mixin animation {
+  // @todo FUTURE
+}
+
+@mixin duration {
+  // @todo FUTURE - Decide upon and add tokens for transition times
+}
+
+@mixin border-radius {
+  // Standard Sizes
+  --dx-border-radius-xs: 0.125rem;
+  --dx-border-radius-sm: 0.25rem;
+  --dx-border-radius-md: 0.5rem;
+  --dx-border-radius-lg: 0.75rem;
+  --dx-border-radius-xl: 1rem;
+
+  // Additional sizes
+  --dx-border-radius-none: 0px;
+  --dx-border-radius-circle: 50%;
+  --dx-border-radius-pill: 9999px;
+}
+
+@mixin border {
+  @include border-radius();
+}
+
+@mixin color-neutral {
+  --dx-color-neutral-000: 255 255 255;
+  --dx-color-neutral-050: 249 249 249;
+  --dx-color-neutral-100: 236 236 236;
+  --dx-color-neutral-200: 222 222 222;
+  --dx-color-neutral-300: 206 206 206;
+  --dx-color-neutral-400: 186 186 186;
+  --dx-color-neutral-500: 160 160 160;
+  --dx-color-neutral-600: 132 132 132;
+  --dx-color-neutral-700: 108 108 108;
+  --dx-color-neutral-800: 89 89 89;
+  --dx-color-neutral-900: 63 63 63;
+  --dx-color-neutral-950: 39 39 39;
+  --dx-color-neutral-999: 0 0 0;
+}
+
+@mixin color {
+  @include color-neutral();
+}
+
+@mixin elevation-shadow {
+  // @todo FUTURE - Decide upon and add tokens for shadows
+}
+
+@mixin elevation-z-index {
+  // @todo FUTURE - Decide upon and add tokens for z-index values
+}
+
+@mixin elevation {
+  @include elevation-shadow();
+  @include elevation-z-index();
+}
+
+@mixin typography-font-family {
+  --dx-font-primary: sans-serif;
+  --dx-font-sans: sans-serif;
+  --dx-font-serif: serif;
+  --dx-font-mono: monospace;
+}
+
+@mixin typography-font-size {
+  --dx-font-size-2xs: 0.625rem;
+  --dx-font-size-xs: 0.75rem;
+  --dx-font-size-sm: 0.875rem;
+  --dx-font-size-md: 1rem;
+  --dx-font-size-lg: 1.25rem;
+  --dx-font-size-xl: 1.5rem;
+  --dx-font-size-2xl: 2.25rem;
+  --dx-font-size-3xl: 3rem;
+  --dx-font-size-4xl: 4rem;
+}
+
+@mixin typography-font-weight {
+  --dx-font-weight-normal: 400;
+  --dx-font-weight-bold: 700;
+}
+
+@mixin typography-letter-spacing {
+  --dx-letter-spacing-sm: -0.015em;
+  --dx-letter-spacing-md: normal;
+  --dx-letter-spacing-lg: 0.075em;
+}
+
+@mixin typography-line-height {
+  --dx-line-height-sm: 1.4;
+  --dx-line-height-md: 1.8;
+  --dx-line-height-lg: 2.2;
+}
+
+@mixin typography {
+  @include typography-font-family();
+  @include typography-font-size();
+  @include typography-font-weight();
+  @include typography-letter-spacing();
+  @include typography-line-height();
+}

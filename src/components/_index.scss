@@ -1,0 +1,13 @@
+@forward './button';
+@forward './table';
+@forward './typography';
+
+@use './button' as button;
+@use './table' as table;
+@use './typography' as typography;
+
+@mixin components {
+  @include button.button();
+  @include table.table();
+  @include typography.typography();
+}
